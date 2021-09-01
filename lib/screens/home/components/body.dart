@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../constants.dart';
 import 'categories.dart';
 import 'generates.dart';
 
@@ -9,12 +10,17 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CategoryList(),
-        Generate(),
-        MovieCarousel(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          CategoryList(),
+          Generate(),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
+          MovieCarousel(),
+        ],
+      ),
     );
   }
 }
